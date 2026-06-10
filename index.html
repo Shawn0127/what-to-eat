@@ -3,10 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>What2Eat V1.0B</title>
+<title>What2Eat V2.0 Alpha</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<div class="app">
 
 <div class="map-area">
   <div id="locationText" class="top-search">📍 取得位置中...</div>
@@ -15,9 +17,28 @@
 
 <div class="sheet">
   <div class="handle"></div>
-  <h1>今天吃什麼</h1>
 
-  <label>距離 <span id="distanceText">1.5 km</span></label>
+  <h1>🍜 今天吃什麼</h1>
+
+  <h3>料理種類</h3>
+  <div class="tags">
+    <button class="tag active">🍚 飯類</button>
+    <button class="tag">🍜 麵類</button>
+    <button class="tag">🍲 火鍋</button>
+    <button class="tag">🍖 燒肉</button>
+    <button class="tag">🍔 漢堡</button>
+    <button class="tag">🍰 甜點</button>
+  </div>
+
+  <h3>國家料理</h3>
+  <div class="tags">
+    <button class="tag active">🇯🇵 日式</button>
+    <button class="tag">🇰🇷 韓式</button>
+    <button class="tag">🇹🇼 台式</button>
+    <button class="tag">🇮🇹 義式</button>
+  </div>
+
+  <label>搜尋半徑 <span id="distanceText">1.5 km</span></label>
   <input type="range" id="distance" min="200" max="5000" value="1500">
 
   <label>最低評分 <span id="ratingText">4.0 ★</span></label>
@@ -26,14 +47,19 @@
   <label>最低評論數 <span id="reviewText">100</span></label>
   <input type="range" id="reviews" min="0" max="1000" step="100" value="100">
 
-  <button id="searchBtn">🔍 搜尋附近餐廳</button>
+  <button id="searchBtn" class="primary">🔍 搜尋餐廳</button>
+  <button id="randomBtn" class="secondary">🎡 幫我決定</button>
+
+  <div class="results-header">
+    <span>搜尋結果</span>
+  </div>
 
   <div id="restaurantList"></div>
 </div>
 
-<!-- 換成你的 API Key -->
+</div>
+
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1Td2MwrEz6rwSJehaRmlSDwJ5ppIvj3A&libraries=places"></script>
 <script src="app.js"></script>
-
 </body>
 </html>
