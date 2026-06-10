@@ -3,106 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>What2Eat V0.5</title>
+<title>What2Eat V1.0-A</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="app">
-
-  <div class="map-area">
-    <div class="top-search">
-      📍 使用目前位置
-    </div>
-
-    <div class="marker m1">1</div>
-    <div class="marker m2">2</div>
-    <div class="marker m3">3</div>
-    <div class="marker m4">4</div>
-
-    <div class="user-pin"></div>
-  </div>
-
-  <div class="sheet">
-
-    <div class="handle"></div>
-
-    <h2>今天吃什麼</h2>
-
-    <h3>料理種類</h3>
-
-    <div class="tags">
-      <button class="tag active">🍚 飯類</button>
-      <button class="tag">🍜 麵類</button>
-      <button class="tag">🍲 火鍋</button>
-      <button class="tag">🍖 燒肉</button>
-      <button class="tag">🍔 漢堡</button>
-      <button class="tag">🍕 披薩</button>
-      <button class="tag">🍛 咖哩</button>
-      <button class="tag">🥟 水餃</button>
-    </div>
-
-    <h3>國家料理</h3>
-
-    <div class="tags">
-      <button class="tag active">🇯🇵 日式</button>
-      <button class="tag">🇰🇷 韓式</button>
-      <button class="tag">🇹🇼 台式</button>
-      <button class="tag">🇨🇳 中式</button>
-      <button class="tag">🇹🇭 泰式</button>
-      <button class="tag">🇮🇹 義式</button>
-      <button class="tag">🇺🇸 美式</button>
-    </div>
-
-    <h3>其他</h3>
-
-    <div class="tags">
-      <button class="tag">☕ 咖啡廳</button>
-      <button class="tag">🍰 甜點</button>
-      <button class="tag">🥐 早餐</button>
-      <button class="tag">🌙 宵夜</button>
-      <button class="tag">🌱 素食</button>
-    </div>
-
-    <label>距離 <span id="distanceText">1.5 km</span></label>
-    <input type="range" id="distance" min="200" max="5000" value="1500">
-
-    <label>最低評分 <span id="ratingText">4.0 ★</span></label>
-    <input type="range" id="rating" min="3" max="5" step="0.5" value="4">
-
-    <label>最低評論數 <span id="reviewText">100</span></label>
-    <input type="range" id="reviews" min="0" max="1000" step="100" value="100">
-
-    <button class="search-btn">🔍 搜尋餐廳</button>
-    <button class="random-btn">🎡 幫我決定</button>
-
-    <div class="result-header">
-      <span>找到 38 家符合條件</span>
-      <button class="more-btn">查看更多</button>
-    </div>
-
-    <div class="restaurant-card">
-      <img src="https://picsum.photos/200/140?1">
-      <div>
-        <h4>一蘭拉麵</h4>
-        <p>⭐ 4.7 (1523)</p>
-        <p>📍 850m</p>
-      </div>
-    </div>
-
-    <div class="restaurant-card">
-      <img src="https://picsum.photos/200/140?2">
-      <div>
-        <h4>山禾堂拉麵</h4>
-        <p>⭐ 4.6 (987)</p>
-        <p>📍 1.2km</p>
-      </div>
-    </div>
-
-  </div>
-
+<div class="map-area">
+  <div id="locationText" class="top-search">📍 取得位置中...</div>
+  <div id="map"></div>
 </div>
 
+<div class="sheet">
+  <div class="handle"></div>
+  <h1>今天吃什麼</h1>
+
+  <p><b>重要：</b>請將下方 Google Maps script 的 YOUR_API_KEY 換成你的 API Key。</p>
+
+  <label>距離 <span id="distanceText">1.5 km</span></label>
+  <input type="range" id="distance" min="200" max="5000" value="1500">
+
+  <label>最低評分 <span id="ratingText">4.0 ★</span></label>
+  <input type="range" id="rating" min="3" max="5" step="0.5" value="4">
+
+  <label>最低評論數 <span id="reviewText">100</span></label>
+  <input type="range" id="reviews" min="0" max="1000" step="100" value="100">
+</div>
+
+<!-- 把 YOUR_API_KEY 換成你的金鑰 -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1Td2MwrEz6rwSJehaRmlSDwJ5ppIvj3A&libraries=places"></script>
 <script src="app.js"></script>
+
 </body>
 </html>
