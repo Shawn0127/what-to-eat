@@ -17,7 +17,15 @@ distance.oninput=e=>distanceText.textContent=(e.target.value/1000).toFixed(1)+' 
 rating.oninput=e=>ratingText.textContent=e.target.value+' ★';
 reviews.oninput=e=>reviewText.textContent=e.target.value;
 
-document.querySelectorAll('.tag').forEach(t=>t.onclick=()=>t.classList.toggle('active'));
+document.querySelectorAll('.tag').forEach(tag => {
+
+    tag.addEventListener('click', function(){
+
+        this.classList.toggle('active');
+
+    });
+
+});
 
 searchBtn.onclick=()=>{
  if(!map)return;
