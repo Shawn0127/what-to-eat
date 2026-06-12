@@ -15,32 +15,8 @@ input[type=range]{width:100%;accent-color:var(--primary)}
 .primary,.secondary{width:100%;padding:14px;border-radius:14px;border:none;margin-top:12px}
 .primary{background:var(--primary);color:#fff}
 .secondary{background:#fff;color:var(--primary);border:2px solid var(--primary)}
-.restaurant-card{
-    display:flex;
-    gap:12px;
-    align-items:flex-start;
-}
-
-.restaurant-photo{
-    width:90px;
-    height:90px;
-    min-width:90px;
-    object-fit:cover;
-    border-radius:12px;
-    margin:0;
-}
-
-.restaurant-info{
-    flex:1;
-}
-
-.restaurant-info h4{
-    margin:0 0 8px 0;
-    font-size:18px;
-}
-
-.restaurant-address{
-    font-size:13px;
-    color:#666;
-    line-height:1.4;
-}
+.restaurant-card{display:flex;gap:12px;align-items:flex-start;}
+.restaurant-photo{width:90px;height:90px;min-width:90px;object-fit:cover;border-radius:12px;margin:0;}
+.restaurant-info{flex:1;}
+.restaurant-info h4{margin:0 0 8px 0;font-size:18px;}
+.restaurant-address{font-size:13px;color:#666;line-height:1.4;}
