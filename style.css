@@ -14,8 +14,8 @@ label{display:flex;justify-content:space-between;margin-top:12px;font-weight:bol
 input[type=range]{width:100%;accent-color:var(--primary)}
 .primary,.secondary{width:100%;padding:14px;border-radius:14px;border:none;margin-top:12px}
 .primary{background:var(--primary);color:#fff}
-.secondary{background:#fff;color:var(--primary);border:2px solid var(--primary);margin-top:24px}
-.restaurant-card{display:flex;gap:12px;align-items:flex-start;}
+.secondary{background:#fff;color:var(--primary);border:2px solid var(--primary)}
+.restaurant-card{display:flex;gap:12px;align-items:flex-start;margin-top:24px}
 .restaurant-photo{width:90px;height:90px;min-width:90px;object-fit:cover;border-radius:12px;margin:0;}
 .restaurant-info{flex:1;}
 .restaurant-info h4{margin:0 0 8px 0;font-size:18px;}
