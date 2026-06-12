@@ -341,6 +341,18 @@ function renderResults() {
     );
 }
 
+randomBtn.onclick = () => {
+
+    if(allResults.length === 0){
+
+        alert("請先搜尋餐廳");
+
+        return;
+    }
+
+    startDraw();
+
+};
 function startDraw(){
 
     let counter = 0;
