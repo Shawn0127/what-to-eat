@@ -363,11 +363,11 @@ randomBtn.onclick = () => {
 
 };
 function startDraw(){
+    if(drawInterval) return;
 
     let counter = 0;
 
     drawInterval = setInterval(() => {
-        if(drawInterval) return;
         const randomIndex =
             Math.floor(
                 Math.random() *
