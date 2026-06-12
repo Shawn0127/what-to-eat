@@ -4,6 +4,8 @@ let userLng;
 
 let markers = [];
 let allResults = [];
+let drawInterval = null;
+let currentPick = null;
 
 function initMap(lat, lng) {
     map = new google.maps.Map(
@@ -339,27 +341,45 @@ function renderResults() {
     );
 }
 
-randomBtn.onclick = () => {
+function startDraw(){
 
-    if (allResults.length === 0) {
+    let counter = 0;
 
-        alert(
-            "請先搜尋餐廳"
-        );
+    drawInterval = setInterval(() => {
 
-        return;
-    }
+        const randomIndex =
+            Math.floor(
+                Math.random() *
+                allResults.length
+            );
 
-    const randomIndex =
-        Math.floor(
-            Math.random() *
-            allResults.length
-        );
+        currentPick =
+            allResults[randomIndex];
 
-    const pick =
-        allResults[randomIndex];
+        randomBtn.textContent =
+            `🎲 ${currentPick.name}`;
 
-    alert(
-        `🎉 今天吃：\n${pick.name}`
-    );
-};
+        counter++;
+
+        if(counter >= 30){
+
+            clearInterval(drawInterval);
+
+            drawInterval = null;
+
+            randomBtn.textContent =
+                `🎉 今天吃：${currentPick.name}`;
+
+            setTimeout(() => {
+
+                alert(
+                    `🎉 今天吃：\n${currentPick.name}`
+                );
+
+            },300);
+
+        }
+
+    },100);
+
+}
