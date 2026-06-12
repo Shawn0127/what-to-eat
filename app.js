@@ -367,7 +367,7 @@ function startDraw(){
     let counter = 0;
 
     drawInterval = setInterval(() => {
-
+        if(drawInterval) return;
         const randomIndex =
             Math.floor(
                 Math.random() *
