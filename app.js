@@ -253,6 +253,14 @@ function renderResults() {
                         1000
                     ).toFixed(1)}km`;
 
+            const photoUrl =
+                place.photos?.length
+                ? place.photos[0].getUrl({
+                      maxWidth: 300,
+                      maxHeight: 200
+                  })
+                : "";
+
             card.innerHTML = `
                 <div>
                     <h4>${place.name}</h4>
