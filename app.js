@@ -91,6 +91,15 @@ function calculateDistance(place) {
 }
 
 searchBtn.onclick = () => {
+    if(drawInterval){
+        clearInterval(drawInterval);
+        drawInterval = null;
+    }
+
+    currentPick = null;
+
+    randomBtn.textContent =
+        "🤔 幫我決定";
 
     if (!map) return;
 
