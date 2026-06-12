@@ -363,6 +363,8 @@ randomBtn.onclick = () => {
 
 };
 function startDraw(){
+    console.log("startDraw");
+    console.log(allResults.length);
     if(drawInterval) return;
 
     let counter = 0;
