@@ -296,6 +296,10 @@ function renderResults() {
                     );
 
                     map.setZoom(17);
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
 
                     document
                         .querySelectorAll(
