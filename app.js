@@ -262,31 +262,30 @@ function renderResults() {
                 : "";
 
             card.innerHTML = `
-                ${
-                    photoUrl
-                        ? `<img class="restaurant-photo" src="${photoUrl}" alt="${place.name}">`
-                        : ""
-                    }
-                <div>
-                    <h4>${place.name}</h4>
+<img
+ class="restaurant-photo"
+ src="${photoUrl}"
+>
 
-                    <p>
-                    ⭐ ${place.rating || "N/A"}
-                    </p>
+<div class="restaurant-info">
 
-                    <p>
-                    📝 ${place.user_ratings_total || 0}
-                    </p>
+    <h4>${place.name}</h4>
 
-                    <p>
-                    📍 ${distanceTextValue}
-                    </p>
+    <div>
+        ⭐ ${place.rating || "N/A"}
+        (${place.user_ratings_total || 0})
+    </div>
 
-                    <p>
-                    ${place.formatted_address || place.vicinity || ""}
-                    </p>
-                </div>
-            `;
+    <div>
+        📍 ${distanceTextValue}
+    </div>
+
+    <div class="restaurant-address">
+        ${place.formatted_address || place.vicinity || ""}
+    </div>
+
+</div>
+`;
 
             card.addEventListener(
                 "click",
