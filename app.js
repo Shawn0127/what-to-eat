@@ -262,6 +262,11 @@ function renderResults() {
                 : "";
 
             card.innerHTML = `
+                ${
+                    photoUrl
+                        ? `<img class="restaurant-photo" src="${photoUrl}" alt="${place.name}">`
+                        : ""
+                    }
                 <div>
                     <h4>${place.name}</h4>
 
